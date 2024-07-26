@@ -4,31 +4,19 @@ xoxmap = {"A1" : "_" , "A2" : "_" , "A3" : "_" , "B1" : "_" , "B2" : "_" , "B3" 
 
 
 while True : 
-    print("\t   1 2 3")
-    print(f"\tA |{xoxmap["A1"]}|{xoxmap["A2"]}|{xoxmap["A3"]}|")
-    print(f"\tB |{xoxmap["B1"]}|{xoxmap["B2"]}|{xoxmap["B3"]}|")
-    print(f"\tC |{xoxmap["C1"]}|{xoxmap["C2"]}|{xoxmap["C3"]}|")
+    xox.print_map(xoxmap)
     print("\n\n 1. Oyuncunun Sırası : ")
-    xoxmap = xox.print_board(xoxmap)
+    xoxmap = xox.write_board(xoxmap)
     if xox.is_finished(xoxmap) :
-        print("\t   1 2 3")
-        print(f"\tA |{xoxmap["A1"]}|{xoxmap["A2"]}|{xoxmap["A3"]}|")
-        print(f"\tB |{xoxmap["B1"]}|{xoxmap["B2"]}|{xoxmap["B3"]}|")
-        print(f"\tC |{xoxmap["C1"]}|{xoxmap["C2"]}|{xoxmap["C3"]}|")
+        xox.print_map(xoxmap)
         print("\n\nOyun bitti !!! 1. Oyuncu kazandı tebrikler")
         break
     
-    print("\t   1 2 3")
-    print(f"\tA |{xoxmap["A1"]}|{xoxmap["A2"]}|{xoxmap["A3"]}|")
-    print(f"\tB |{xoxmap["B1"]}|{xoxmap["B2"]}|{xoxmap["B3"]}|")
-    print(f"\tC |{xoxmap["C1"]}|{xoxmap["C2"]}|{xoxmap["C3"]}|")
+    xox.print_map(xoxmap)
     print("\n\n 2. Oyuncunun Sırası : ")
-    xoxmap = xox.print_board(xoxmap)
+    xoxmap = xox.write_board(xoxmap)
     if xox.is_finished(xoxmap) :
-        print("\t   1 2 3")
-        print(f"\tA |{xoxmap["A1"]}|{xoxmap["A2"]}|{xoxmap["A3"]}|")
-        print(f"\tB |{xoxmap["B1"]}|{xoxmap["B2"]}|{xoxmap["B3"]}|")
-        print(f"\tC |{xoxmap["C1"]}|{xoxmap["C2"]}|{xoxmap["C3"]}|")
+        xox.print_map(xoxmap)
         print("\n\nOyun bitti !!! 2. Oyuncu kazandı tebrikler")
         break
     

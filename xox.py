@@ -1,6 +1,6 @@
 
 
-def print_board(xoxmap): 
+def write_board(xoxmap): 
     
     while True : 
         line = input("Lütfen değiştireceğiniz sırayı alfabetik olarak giriniz : ").upper()
@@ -30,6 +30,13 @@ def print_board(xoxmap):
              print("Hatalı sütun girdiniz lütfen yeniden giriniz.")       
              continue
         
+def print_map(xoxmap): 
+     lines = ["A" , "B" , "C" ]
+     print("\t   1 2 3")
+     for i in lines : 
+          print(f"\t{i} |{xoxmap[f"{i}1"]}|{xoxmap[f"{i}2"]}|{xoxmap[f"{i}3"]}|")
+
+     
 def is_finished(xoxmap) : 
     lines = ["A" , "B" , "C"]
     collumns = ["1" , "2" , "3"]
