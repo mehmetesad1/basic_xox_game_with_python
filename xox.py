@@ -3,7 +3,7 @@
 def write_board(xoxmap): 
     
     while True : 
-        square = input("Lütfen değiştirmek istediğiniz karenin kordinatının giriniz : ").upper()
+        square = input("Lütfen değiştirmek istediğiniz karenin kordinatını  giriniz (örneğin : A1) : ").upper()
         line = square[0]
         collumn = square[1]
         if line not in ["A" ,  "B" , "C"] :            
