@@ -3,21 +3,20 @@
 def write_board(xoxmap): 
     
     while True : 
-        line = input("Lütfen değiştireceğiniz sırayı alfabetik olarak giriniz : ").upper()
+        square = input("Lütfen değiştirmek istediğiniz karenin kordinatının giriniz : ").upper()
+        line = square[0]
+        collumn = square[1]
         if line not in ["A" ,  "B" , "C"] :            
             print("Hatalı sıra girdiniz lütfen yeniden giriniz")  
-            continue
-        collumn = input("Lütfen değiştireceğiniz sütunu numeric olarak giriniz : ") 
+            continue       
         if collumn.isnumeric():
                 xoro = input("Lütfen değiştirmek istediğiniz karakteri giriniz X ya da O : ").upper()
                 collumn = int(collumn)
                 if 4 > collumn > 0: 
-                    collumn = str(collumn)
-                    square = line + (collumn)
+                    
                     if xoxmap[square] == "_":
                         if xoro in ["X" , "O"] : 
                              xoxmap.update({square : xoro})
-                             
                              return xoxmap
                              break
                         else : 
